@@ -1,0 +1,85 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!-- CSS only -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+     <!-- JS, Popper.js, and jQuery -->
+     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+     <!-- AJAX callback -->
+    <script type='text/javascript' src="{{ url_for('static', filename='searchbar-realtime.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    
+    <style>
+        .container
+        {
+            /* background-color:#555; */
+            padding:0px;
+        }
+        .form-group 
+        {
+            margin:0px;
+        }
+        #searchbar 
+        {
+            font-size:30px;
+            background-color:transparent;
+        }
+        .suggestion 
+        {
+            border: 1px solid #999;
+        }
+        #suggestions > h1 
+        {
+            padding: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            margin:0px;
+        }
+        #suggestions > h1:hover 
+        {
+            background-color:teal;
+        }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">Country Searcher</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+</nav>
+
+<main role="main">
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Hello, world!</h1>
+      <p>Search for any country you want! </p>
+      <p><a class="btn btn-info btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    </div>
+  </div>
+  <div class="container">
+    <form method="GET" action="/usersearch">
+        <div class="form-group">
+            <input id = "searchbar" class="form-control" name="name"  type="text"  placeholder="Search here ..." autocomplete="off">
+        </div>
+    </form>
+    <div id="suggestions">
+    </div>
+  </div> <!-- /container -->
+
+</main>
+</body>
+</html>
+
