@@ -7,4 +7,4 @@ A simple webpage with a user friendly searchbar that auto generates suggestions 
 * SQL Queries
  
 # Screenshots
-![](static/images/screenshot-1)
+![](static/images/screenshot-1.png)
